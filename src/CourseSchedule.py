@@ -12,7 +12,7 @@ class Solution:
         self.gen_graph(prerequisites)
         self.stack = [course for course in range(numCourses) if self.record[course] == 0]
         while self.stack:
-            course
+            course = self.stack.pop()
             for dep in self.graph[course]:
                 self.record[dep] -= 1
                 if self.record[dep] == 0:
